@@ -15,19 +15,16 @@
 
 
 
-<meta name="description" content="##一、iOS应用数据存储的常用方式
-12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
+<meta name="description" content="一、iOS应用数据存储的常用方式12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sky">
 <meta property="og:url" content="http://weishine121.github.io/2016/07/31/iOS开发之数据存储/index.html">
 <meta property="og:site_name" content="Sloky">
-<meta property="og:description" content="##一、iOS应用数据存储的常用方式
-12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
-<meta property="og:updated_time" content="2016-07-31T13:42:15.000Z">
+<meta property="og:description" content="一、iOS应用数据存储的常用方式12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
+<meta property="og:updated_time" content="2016-07-31T14:00:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sky">
-<meta name="twitter:description" content="##一、iOS应用数据存储的常用方式
-12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
+<meta name="twitter:description" content="一、iOS应用数据存储的常用方式12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -140,13 +137,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -258,7 +255,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-iOS开发之数据存储" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -294,25 +291,21 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##一、iOS应用数据存储的常用方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- XML属性列表（plist）归档</div><div class="line">- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)</div><div class="line">- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。</div><div class="line">- SQLite3 当非常大量的数据存储时使用</div><div class="line">- Core Data 就是对SQLite的封装</div></pre></td></tr></table></figure>
+        <h2 id="一、iOS应用数据存储的常用方式"><a href="#一、iOS应用数据存储的常用方式" class="headerlink" title="一、iOS应用数据存储的常用方式"></a>一、iOS应用数据存储的常用方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- XML属性列表（plist）归档</div><div class="line">- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)</div><div class="line">- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。</div><div class="line">- SQLite3 当非常大量的数据存储时使用</div><div class="line">- Core Data 就是对SQLite的封装</div></pre></td></tr></table></figure>
  <a id="more"></a>
-<p>##二、获取路径</p>
-<pre><code>- 获取bundle路径
+<h2 id="二、获取路径"><a href="#二、获取路径" class="headerlink" title="二、获取路径"></a>二、获取路径</h2><pre><code>- 获取bundle路径
 
   NSString *path = [NSBundle mainBundle].bundlePath;
 
 -获取沙盒路径
 
   NSString *home = NSHomeDirectory();
-</code></pre><p>##三、沙盒路径目录结构</p>
-<pre><code>-Document          保存应用运行时生成的需要持久化的数据
+</code></pre><h2 id="三、沙盒路径目录结构"><a href="#三、沙盒路径目录结构" class="headerlink" title="三、沙盒路径目录结构"></a>三、沙盒路径目录结构</h2><pre><code>-Document          保存应用运行时生成的需要持久化的数据
 -library
     Caches         保存应用运行时生成的需要持久化的数据
     Preferences    保存应用的所有偏好设置
 -temp              保存应用运行时所需的临时数据
-</code></pre><p>##四、利用沙盒根目录拼接”Documents”字符串</p>
-<ul>
+</code></pre><h2 id="四、利用沙盒根目录拼接”Documents”字符串"><a href="#四、利用沙盒根目录拼接”Documents”字符串" class="headerlink" title="四、利用沙盒根目录拼接”Documents”字符串"></a>四、利用沙盒根目录拼接”Documents”字符串</h2><ul>
 <li><p>方式一：（拼接字符串）</p>
 <pre><code>NSString *home =NSHomeDirectory();
 NSString *documents = [home stringByAppendingString:@“/Documents&quot;];
@@ -329,12 +322,10 @@ NSString*documents =[homestringByAppendingPathComponent:@&quot;Documents&quot;];
 NSString * documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 </code></pre></li>
 </ul>
-<p>##五、获取caches文件夹路径</p>
-<p>//获取caches文件夹    </p>
+<h2 id="五、获取caches文件夹路径"><a href="#五、获取caches文件夹路径" class="headerlink" title="五、获取caches文件夹路径"></a>五、获取caches文件夹路径</h2><p>//获取caches文件夹    </p>
 <pre><code>NSString * cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, NO) lastObject];
-</code></pre><p>##六、获取偏好设置文件夹路径<br>      NSTemporaryDirectory（）</p>
-<p>##七、plist数据的存储与读取</p>
-<ul>
+</code></pre><h2 id="六、获取偏好设置文件夹路径"><a href="#六、获取偏好设置文件夹路径" class="headerlink" title="六、获取偏好设置文件夹路径"></a>六、获取偏好设置文件夹路径</h2><pre><code>NSTemporaryDirectory（）
+</code></pre><h2 id="七、plist数据的存储与读取"><a href="#七、plist数据的存储与读取" class="headerlink" title="七、plist数据的存储与读取"></a>七、plist数据的存储与读取</h2><ul>
 <li>//数据存储</li>
 </ul>
 <pre><code>    NSArray * names = [NSArray arrayWithObjects:@&quot;Bob&quot;,@&quot;王宝&quot;, @&quot;球童&quot;,@&quot;Jack&quot;,nil];
@@ -367,8 +358,7 @@ NSString * filePath = [path stringByAppendingPathComponent:@&quot;names.plist&qu
 NSArray * names = [NSArray arrayWithContentsOfFile:filePath];
 
 NSLog(@&quot;%@&quot;,names);
-</code></pre><p>##八、plist数据的存储与读取</p>
-<ul>
+</code></pre><h2 id="八、plist数据的存储与读取"><a href="#八、plist数据的存储与读取" class="headerlink" title="八、plist数据的存储与读取"></a>八、plist数据的存储与读取</h2><ul>
 <li><p>//偏好设置存储</p>
 <p>  //1.获取NSUserDefaults对象<br>  NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];</p>
 <p>  //2.存储数据<br>  [userDefaults setObject:@”Jack” forKey:@”name”];</p>
@@ -388,8 +378,7 @@ NSLog(@&quot;%@&quot;,names);
 <p>  NSLog(@”name =%@  age = %ld sex = %d”,name,age,sex);</p>
 </li>
 </ul>
-<p>##九、归档与反归档</p>
-<p>“归档”：是一种可以把任何对象，直接保存为文件的方式。</p>
+<h2 id="九、归档与反归档"><a href="#九、归档与反归档" class="headerlink" title="九、归档与反归档"></a>九、归档与反归档</h2><p>“归档”：是一种可以把任何对象，直接保存为文件的方式。</p>
 <ul>
 <li>如果对象是NSString、NSDictionary、NSArray、NSData、NSNumber等类型，可以直接用NSKeyedArchiver进行归档和恢复</li>
 <li>不是所有的对象都可以直接用这种方法进行归档，只有遵守了NSCoding协议的对象才可以</li>
@@ -413,17 +402,17 @@ NSLog(@&quot;%@&quot;,names);
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/31/iOS开发之数据存储/">sky</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Sloky Xu</a></p>
-        <p><span>发布时间:</span>2016-07-31, 21:37:24</p>
-        <p><span>最后更新:</span>2016-07-31, 21:42:15</p>
+        <p><span>Title:</span><a href="/2016/07/31/iOS开发之数据存储/">sky</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Sloky Xu</a></p>
+        <p><span>Created:</span>2016-07-31, 21:37:24</p>
+        <p><span>Updated:</span>2016-07-31, 22:00:22</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/31/iOS开发之数据存储/" title="sky">http://weishine121.github.io/2016/07/31/iOS开发之数据存储/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/07/31/iOS开发之数据存储/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/07/31/iOS开发之数据存储/" title="sky">http://weishine121.github.io/2016/07/31/iOS开发之数据存储/</a>
+            <span class="copy-path" data-clipboard-text="From http://weishine121.github.io/2016/07/31/iOS开发之数据存储/　　By Sloky Xu" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -444,8 +433,8 @@ NSLog(@&quot;%@&quot;,names);
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
+    <strong class="toc-title">Contents</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、iOS应用数据存储的常用方式"><span class="toc-number">1.</span> <span class="toc-text">一、iOS应用数据存储的常用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、获取路径"><span class="toc-number">2.</span> <span class="toc-text">二、获取路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、沙盒路径目录结构"><span class="toc-number">3.</span> <span class="toc-text">三、沙盒路径目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、利用沙盒根目录拼接”Documents”字符串"><span class="toc-number">4.</span> <span class="toc-text">四、利用沙盒根目录拼接”Documents”字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、获取caches文件夹路径"><span class="toc-number">5.</span> <span class="toc-text">五、获取caches文件夹路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、获取偏好设置文件夹路径"><span class="toc-number">6.</span> <span class="toc-text">六、获取偏好设置文件夹路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、plist数据的存储与读取"><span class="toc-number">7.</span> <span class="toc-text">七、plist数据的存储与读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、plist数据的存储与读取"><span class="toc-number">8.</span> <span class="toc-text">八、plist数据的存储与读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、归档与反归档"><span class="toc-number">9.</span> <span class="toc-text">九、归档与反归档</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -454,10 +443,10 @@ NSLog(@&quot;%@&quot;,names);
     }
 </style>
 
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
 <script>
-    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    yiliaConfig.toc = ["Hide", "Show", !!"false"];
 </script>
 
 
@@ -515,13 +504,13 @@ NSLog(@&quot;%@&quot;,names);
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/31/sky/" title="下一篇: sky">
+            <a href="/2016/07/31/sky/" title="Next: sky">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -544,14 +533,14 @@ NSLog(@&quot;%@&quot;,names);
                 2016 Sloky Xu
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
+                        <span id="site-visit" >Site Visitors: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -561,7 +550,7 @@ NSLog(@&quot;%@&quot;,names);
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
+                        <span id="page-visit">Page Hits: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -594,9 +583,9 @@ NSLog(@&quot;%@&quot;,names);
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
