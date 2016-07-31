@@ -138,13 +138,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>友情鏈接</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>關於我</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -256,7 +256,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
@@ -303,7 +303,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/07/31/iOS开发之数据存储/#more">查看全文 >></a>
+          <a href="/2016/07/31/iOS开发之数据存储/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -400,61 +400,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<h2 id="title-MAC下SVN服务器的搭建"><a href="#title-MAC下SVN服务器的搭建" class="headerlink" title="title:MAC下SVN服务器的搭建"></a>title:MAC下SVN服务器的搭建</h2><h2 id="1、新建svn服务目录"><a href="#1、新建svn服务目录" class="headerlink" title="1、新建svn服务目录"></a>1、新建svn服务目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir  ~/svn</div><div class="line">cd  ~/svn</div><div class="line">mkdir  myProject</div></pre></td></tr></table></figure>
-<p>##2、创建版本仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svnadmin  create  ~/svn/myProject</div><div class="line">执行上面的命令后，目录repository下就会有一些文件</div><div class="line">注意myProject里面的文件就svnadmin给你建立的</div></pre></td></tr></table></figure></p>
-<p><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_2.png" alt="image"><br><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_4.png" alt="image"></p>
-<p>##3、下面是修改授权配置文件<br><code>注意：所有下面的配置都要顶格,否则会报错</code>  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">进入仓库配置目录/Users/imac11/svn/myProject/conf</div><div class="line"></div><div class="line">cd /Users/imac11/svn/myProject/conf</div></pre></td></tr></table></figure>
-<p>##3.1、修改配置文件svnserve.conf，取消下列行的注释“#”：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vi  svnserve.conf （ 打开进入修改页面）</div><div class="line"></div><div class="line">anon-access = read</div><div class="line">auth-access = write</div><div class="line">password-db = passwd (密码配置的保存文件)</div><div class="line">auth-db = authz (认证配置的保存文件)</div></pre></td></tr></table></figure></p>
-<p><code>说明：在英文输入法状态下 按 i ，进入编辑就模式，删除上面四句话前面的#和空格，并修改anon-access=none。按’  shift + ：’，然后按 wq 保存并退出。
-说明：anon-access = read这句最好修改为anon-access=none ，anon-access = read代表匿名访问的时候是只读的，若改为anon-access = none代表禁止匿名访问，需要帐号密码才能访问</code></p>
-<p>##3.2、修改密码配置文件passwd</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">格式为“用户名=密码”</div><div class="line">vi  passwd   （打开进入编辑页面）</div><div class="line"></div><div class="line">[users]</div><div class="line"> test1=123456  （用户名为test ，密码为123456）</div><div class="line"> test2=123456</div></pre></td></tr></table></figure>
-<p>##3.3、打开authz，配置用户组和权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">使用[/]代表svn服务器中的所有资源库</div><div class="line"> vi  authz</div><div class="line">     [/]</div><div class="line">     test1=rw</div><div class="line">     test2=rw</div><div class="line">[myProject:/]</div><div class="line">      test1=rw</div><div class="line">      test2=rw</div></pre></td></tr></table></figure></p>
-<p><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_11.png" alt="image">   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">格式为 [groups]</div><div class="line">用户组名 = 用户组成员</div><div class="line">[需要授权的目录]</div><div class="line">@组名 = 权限</div><div class="line">用户名 = 权限</div><div class="line">例如：</div><div class="line">[groups]</div><div class="line">developers = zhangsan,jesse,bill</div><div class="line">上面两句表示：zhangsan</div><div class="line">[/]</div><div class="line">@developers = r</div><div class="line">zhangsan = rw</div><div class="line">* =</div></pre></td></tr></table></figure>
-<p>##4、启动svn服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svnserve -d -r /Users/imac11/svn</div></pre></td></tr></table></figure></p>
-<p><code>说明：如果没有提示信息，表示启动服务成功。</code></p>
-<p>##5、提交工程代码到svn服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svn import 真实存在的源代码路径 svn://ip地址/svn/respository --username=zhangsan -m &quot;@@--初始化项目--@@&quot;</div><div class="line"></div><div class="line"> 回车后提示输入密码，输入密码即可。</div></pre></td></tr></table></figure></p>
-<p> <code>说明：svn://ip地址/svn/respository中ip地址是指电脑网络的IP地址。</code></p>
-<p>##6、验证提交的代码  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">在一个目录中，执行如下命令导出代码：</div></pre></td></tr></table></figure>
-<p>svn checkout svn://localhost/svn/repository</p>
-<p>##7.SVN客户端工具Cornerstone使用教程</p>
-<p>当你打开软件时候会看到如下图所示界面：<br><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_5.png" alt="image"></p>
-<p>现在是空空如也，因此我们应该做点什么，让它发挥作用。界面还是非常的直观和有引导性的，我直接按灰色区域的“Add repository”<br><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_6.png" alt="image"></p>
-<p>完成点击之后会弹出配置界面，一般我们会使用第四个选项卡”SVN Server”.如图</p>
-<p>图中我对SVN服务器做了访问的svn服务器配置,配置介绍如下：<br><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_8.png" alt="image"></p>
-<p>tunnel：访问通道，默认不用修改</p>
-<p>Server：我的svn服务器在本地，所以Server填写了localhost</p>
-<p>Port:设置端口号，我在服务器上没有配置访问端口号，所以port留空</p>
-<p>Repository Path:这个是服务器仓库的目录位置，我这里填写了myProject，这是因为我在SVN服务的根路径下添加了myProject仓库。</p>
-<p>Nickname:显示名。这个可以随便填写，建议为仓库和用户名的组合。</p>
-<p>如果您的配置正确应该会添加成功的，如果错误，请检查服务器是否开启和你配置是否正确等。 下图是我们添加仓库成功后的效果图：<br><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_9.png" alt="image"></p>
-<p>现在我们来试试CorenerStone是如何代替我们的命令行的.下图介绍各个功能模块的作用：<br><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_10.png" alt="image"></p>
-<p><img src="/Users/imac11/Desktop/svn服务器搭建/images/Snip20160425_14.png" alt="image"></p>
-<p>使用简介</p>
-<p>1.上传项目到repository</p>
-<p>可以直接拖动到repository的子文件夹中，或是选择软件上方的Import按钮上传，会弹出选项填写所在位置及名称，然后选择Import即可</p>
-<p>2.下载项目</p>
-<p>下载分为两种：Export和Check Out，区别在于，Export后的项目不会与repository中的源文件相关联，是一个独立的版本，而Check Out下来的文件会创建一个working copy，此文件与库中源文件相关联，当有新版本（他人修改）或是本地修改（自己修改）时，working copy会显示修改数量，白色数量为他人修改数量，灰色数量为本人修改数量</p>
-<p>所以如果你是项目中的开发人员，可以选择check out，如果只是下载查看，不希望自己的修改影响到整个项目，最好是选择Export</p>
-<p>3.版本管理</p>
-<p>每一次提交会创建一个新版本，在repository中会保存所有历史版本，如下图（可通过修改人及提交信息进行检索版本），所以用svn开发可以很好的控制项目出现不可解决及未知bug时代码的修复问题：</p>
-<p>svn方便了多人开发同一项目的代码合并问题，但是也有一些事项需要注意：</p>
-<p>①先更新后提交</p>
-<p>在看到有新版本（即同伴已经提交代码时），先更新代码，直至working copy不再显示白色圈，然后运行代码确定可运行且功能无误之后再commit自己的代码，否则，会造成项目中出现多处冲突或bug，且很难排查原因</p>
-<p>②完成独立功能后再提交，且务必填写提交信息</p>
-<p>每完成一个独立的功能，或解决一个bug之后再提交代码，不要连续多次重复提交，造成版本过多过杂，且提交时务必填写提交信息，交代本次完成了什么功能，方便上图中可以进行message的搜索来查看历史版本</p>
-<p>③冲突文件</p>
-<p>原则上同一组开发人员最好不要在同一文件中进行操作，但有时候必须去其他文件中进行操作，或者是误操作，如果同时多人在同一文件的同一位置修改代码，后提交的人会出现版本冲突文件，一般会有三个同样名称不同后缀的文件</p>
-<p>.mine文件：本人所做修改</p>
-<p>两个.r0XX文件：XX为数字，数字较小的为更改前的文件，较大的为更改后的文件，在 文件中会有&lt;&lt;&lt;&lt; mine .r0XX  &gt;&gt;&gt;&gt;&gt;等字样包含起来的代码，即冲突的地方，此时请和组内同事讨论或自己删除某部分修改文件后进行调试，修复文件</p>
-<p>针对ios项目：出现某个工程或文件打不开的情况，如果为.project文件无法打 开，则选择显示包内容-&gt;用文稿打开project.pbxproj文件-&gt;搜索.mine，将.mine部分前 后&lt;&lt;&lt;&lt; &gt;&gt;&gt;&gt;包含起来的代码删除，工程就可以打开了，如果build时出现某个xib文件打不开的错误，则选中，用文稿打开，跟上文 同样操作即可解决无法build的问题</p>
-<p>④新添加文件</p>
-<p>提交时新增加的文件显示为问号状态的，请选中右击后 选择Add to Working Copy之后再commit</p>
-
+              <hr>
+<h2 id="title-MAC下SVN服务器的搭建"><a href="#title-MAC下SVN服务器的搭建" class="headerlink" title="title:MAC下SVN服务器的搭建"></a>title:MAC下SVN服务器的搭建</h2>
+          
       
     </div>
     
@@ -463,6 +411,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2016/05/19/svn/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -490,14 +442,14 @@
                 2016 Sloky Xu
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、簡潔且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄博客主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到訪數: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -507,7 +459,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本頁閱讀量: 
+                        <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -540,9 +492,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
