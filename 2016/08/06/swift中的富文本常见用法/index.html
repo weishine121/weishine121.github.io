@@ -39,7 +39,7 @@ html">
 链接
 行距
 html">
-<meta property="og:updated_time" content="2016-08-06T03:05:52.000Z">
+<meta property="og:updated_time" content="2016-08-06T04:12:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift中的富文本常见用法">
 <meta name="twitter:description" content="字体
@@ -319,7 +319,55 @@ html">
 <li>html</li>
 </ul>
 <a id="more"></a>
-<h1 id="swift中的富文本常见用法"><a href="#swift中的富文本常见用法" class="headerlink" title="swift中的富文本常见用法"></a>swift中的富文本常见用法</h1>
+<h1 id="swift中的富文本常见用法"><a href="#swift中的富文本常见用法" class="headerlink" title="swift中的富文本常见用法"></a>swift中的富文本常见用法</h1><ul>
+<li>准备</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">let textView = UITextView(frame: CGRect(x: 20, y: 100, width: 335, height: 300))</div><div class="line">        view.addSubview(textView)</div><div class="line">        textView.backgroundColor = UIColor.brownColor()</div><div class="line">        textView.editable = false</div><div class="line"></div><div class="line">        let  label = UILabel(frame: CGRect(x: 20, y: 410, width: 335, height: 250))</div><div class="line">        label.backgroundColor = UIColor.lightGrayColor()</div><div class="line">        label.numberOfLines = 0</div><div class="line">        view.addSubview(label)</div><div class="line"></div><div class="line">        let str = &quot;我的字体更别的不同哦,我的颜色是红色,我加了背景色,我加了下划线,我的字距变大了,哈哈我有阴影了,点我啊 带你进入苹果官网&quot;</div><div class="line">        let attributeString = NSMutableAttributedString(string: str)</div></pre></td></tr></table></figure>
+<ul>
+<li>字体</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">attributeString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(20), range: NSMakeRange(0, 10))</div><div class="line">        attributeString.addAttribute(NSFontAttributeName, value: UIFont(name: &quot;Times New Roman&quot;, size: 24)!, range: NSMakeRange(0, 10))</div></pre></td></tr></table></figure>
+<ul>
+<li>字体颜色  </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">attributeString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(11, 7))</div></pre></td></tr></table></figure>
+<ul>
+<li>背景色</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">attributeString.addAttribute(NSBackgroundColorAttributeName, value: UIColor.greenColor(), range: NSMakeRange(19, 6))</div></pre></td></tr></table></figure>
+<ul>
+<li>下划线</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">attributeString.addAttribute(NSUnderlineStyleAttributeName, value: 5, range: NSMakeRange(26, 6))</div></pre></td></tr></table></figure>
+<ul>
+<li>下划线颜色</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">attributeString.addAttribute(NSUnderlineColorAttributeName, value: UIColor.orangeColor(), range: NSMakeRange(26, 5))</div></pre></td></tr></table></figure>
+<ul>
+<li>字距</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">attributeString.addAttribute(NSKernAttributeName, value:10, range: NSMakeRange(33, 7))</div></pre></td></tr></table></figure>
+<ul>
+<li>阴影</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let shadow = NSShadow()</div><div class="line">        shadow.shadowColor = UIColor.blackColor() //阴影颜色</div><div class="line">        shadow.shadowBlurRadius = 2.0 //模糊度</div><div class="line">        shadow.shadowOffset = CGSizeMake(4, 4) //阴影偏移</div><div class="line">        attributeString.addAttribute(NSShadowAttributeName, value:shadow, range: NSMakeRange(41, 7))</div></pre></td></tr></table></figure>
+<ul>
+<li>链接</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">attributeString.addAttribute(NSLinkAttributeName, value: NSURL(string: &quot;http://www.apple.com&quot;)!, range: NSMakeRange(49, 12))</div></pre></td></tr></table></figure>
+<ul>
+<li>行距</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let paragraphStyle = NSMutableParagraphStyle()</div><div class="line">        paragraphStyle.lineSpacing = 20</div><div class="line">        attributeString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, 61))</div></pre></td></tr></table></figure>
+<ul>
+<li>html</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let htmlText = &quot;我是&lt;font color=\&quot;blue\&quot;&gt;html&lt;/font&gt;。&lt;br&gt;An apple is &lt;font color=\&quot;red\&quot;&gt;red&lt;/font&gt;.&quot;</div><div class="line">        do&#123;</div><div class="line">            let attrStr = try NSAttributedString(data: htmlText.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)</div><div class="line"></div><div class="line">  			label.attributedText = attrStr</div><div class="line">        &#125;catch let error as NSError &#123;</div><div class="line">            print(error.localizedDescription)</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>最后别忘了</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">textView.attributedText = attributeString</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -330,7 +378,7 @@ html">
         <p><span>本文标题:</span><a href="/2016/08/06/swift中的富文本常见用法/">swift中的富文本常见用法</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Sloky Xu</a></p>
         <p><span>发布时间:</span>2016-08-06, 11:01:54</p>
-        <p><span>最后更新:</span>2016-08-06, 11:05:52</p>
+        <p><span>最后更新:</span>2016-08-06, 12:12:41</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/08/06/swift中的富文本常见用法/" title="swift中的富文本常见用法">http://weishine121.github.io/2016/08/06/swift中的富文本常见用法/</a>
             <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/08/06/swift中的富文本常见用法/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
