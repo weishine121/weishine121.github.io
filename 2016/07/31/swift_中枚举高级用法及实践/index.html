@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Sloky">
 <meta property="og:description" content="Swift 中枚举高级用法及实践本文是一篇详细且具有实战意义的教程，涵盖几乎所有枚举(Enum)知识点，为你解答Swift中枚举的应用场合以及使用方法。
 和switch语句类似，Swift中的枚举乍看之下更像是C语言中枚举的进阶版本，即允许你定义一种类型，用于表示普通事情中某种用例。不过深入挖掘之后，凭借Swift背后特别的设计理念，相比较C语言枚举来说其在实际场景中的应用更为广泛。特别是作为强大">
-<meta property="og:updated_time" content="2016-08-04T15:36:26.000Z">
+<meta property="og:updated_time" content="2016-08-06T03:08:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift 中枚举高级用法及实践">
 <meta name="twitter:description" content="Swift 中枚举高级用法及实践本文是一篇详细且具有实战意义的教程，涵盖几乎所有枚举(Enum)知识点，为你解答Swift中枚举的应用场合以及使用方法。
@@ -310,31 +310,9 @@ if aMovement == .Left {
     print(&quot;left&quot;) 
 }
 </code></pre><p>案例中，我们无须明确指出enum的实际名称(即case Move.Left:print(“Left”))。因为类型检查器能够自动为此进行类型推算。这对于那些UIKit以及AppKit中错综复杂的枚举是灰常有用的。</p>
-<p>###枚举值(Enum Values)<br>当然，你可能想要为<strong>enum</strong>中每个<strong>case</strong>分配一个值。这相当有用，比如枚举自身实际与某事或某物挂钩时，往往这些东西又需要使用不同类型来表述。在C语言中，你只能为枚举<strong>case</strong>分配整型值，而<strong>Swift</strong>则提供了更多的灵活性。</p>
-<pre><code>// 映射到整型
-enum Movement: Int {
-case Left = 0
-case Right = 1
-case Top = 2
-case Bottom = 3
-}&gt; 
-// 同样你可以与字符串一一对应
-enum House: String {
-case Baratheon = &quot;Ours is the Fury&quot;
-case Greyjoy = &quot;We Do Not Sow&quot;
-case Martell = &quot;Unbowed, Unbent, Unbroken&quot;
-case Stark = &quot;Winter is Coming&quot;
-case Tully = &quot;Family, Duty, Honor&quot;
-case Tyrell = &quot;Growing Strong&quot;
-}
-// 或者float double都可以(同时注意枚举中的花式unicode)
-enum Constants: Double {
-case π = 3.14159
-case e = 2.71828
-case φ = 1.61803398874
-case λ = 1.30357
-}
-</code></pre>
+<p>###枚举值(Enum Values)<br>当然，你可能想要为<strong>enum</strong>中每个<strong>case</strong>分配一个值。这相当有用，比如枚举自身实际与某事或某物挂钩时，往往这些东西又需要使用不同类型来表述。在C语言中，你只能为枚举<strong>case</strong>分配整型值，而<strong>Swift</strong>则提供了更多的灵活性。     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">// 映射到整型</div><div class="line">enum Movement: Int &#123;</div><div class="line">case Left = 0</div><div class="line">case Right = 1</div><div class="line">case Top = 2</div><div class="line">case Bottom = 3</div><div class="line">&#125;&gt; </div><div class="line">// 同样你可以与字符串一一对应</div><div class="line">enum House: String &#123;</div><div class="line">case Baratheon = &quot;Ours is the Fury&quot;</div><div class="line">case Greyjoy = &quot;We Do Not Sow&quot;</div><div class="line">case Martell = &quot;Unbowed, Unbent, Unbroken&quot;</div><div class="line">case Stark = &quot;Winter is Coming&quot;</div><div class="line">case Tully = &quot;Family, Duty, Honor&quot;</div><div class="line">case Tyrell = &quot;Growing Strong&quot;</div><div class="line">&#125;</div><div class="line">// 或者float double都可以(同时注意枚举中的花式unicode)</div><div class="line">enum Constants: Double &#123;</div><div class="line">case π = 3.14159</div><div class="line">case e = 2.71828</div><div class="line">case φ = 1.61803398874</div><div class="line">case λ = 1.30357</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -345,7 +323,7 @@ case λ = 1.30357
         <p><span>本文标题:</span><a href="/2016/07/31/swift_中枚举高级用法及实践/">Swift 中枚举高级用法及实践</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Sloky Xu</a></p>
         <p><span>发布时间:</span>2016-07-31, 23:05:15</p>
-        <p><span>最后更新:</span>2016-08-04, 23:36:26</p>
+        <p><span>最后更新:</span>2016-08-06, 11:08:34</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/31/swift_中枚举高级用法及实践/" title="Swift 中枚举高级用法及实践">http://weishine121.github.io/2016/07/31/swift_中枚举高级用法及实践/</a>
             <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/07/31/swift_中枚举高级用法及实践/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
