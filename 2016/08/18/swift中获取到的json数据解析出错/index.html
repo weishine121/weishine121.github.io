@@ -15,19 +15,25 @@
 
 
 
-<meta name="description" content="Swift 中枚举高级用法及实践本文是一篇详细且具有实战意义的教程，涵盖几乎所有枚举(Enum)知识点，为你解答Swift中枚举的应用场合以及使用方法。
-和switch语句类似，Swift中的枚举乍看之下更像是C语言中枚举的进阶版本，即允许你定义一种类型，用于表示普通事情中某种用例。不过深入挖掘之后，凭借Swift背后特别的设计理念，相比较C语言枚举来说其在实际场景中的应用更为广泛。特别是作为强大">
+<meta name="description" content="swift中获取json数据出错
+报错原因
+
+123456- fatal error: unexpectedly found nil while unwrapping an Optional value- expression unexpectedly raised an error: Error Domain=NSCocoaErrorDomain Code=3840 &amp;quot;Unescape">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift 中枚举高级用法及实践">
-<meta property="og:url" content="http://weishine121.github.io/2016/07/31/swift_中枚举高级用法及实践/index.html">
+<meta property="og:title" content="swift中获取到的json数据解析出错">
+<meta property="og:url" content="http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/index.html">
 <meta property="og:site_name" content="Sloky">
-<meta property="og:description" content="Swift 中枚举高级用法及实践本文是一篇详细且具有实战意义的教程，涵盖几乎所有枚举(Enum)知识点，为你解答Swift中枚举的应用场合以及使用方法。
-和switch语句类似，Swift中的枚举乍看之下更像是C语言中枚举的进阶版本，即允许你定义一种类型，用于表示普通事情中某种用例。不过深入挖掘之后，凭借Swift背后特别的设计理念，相比较C语言枚举来说其在实际场景中的应用更为广泛。特别是作为强大">
-<meta property="og:updated_time" content="2016-08-06T03:10:34.000Z">
+<meta property="og:description" content="swift中获取json数据出错
+报错原因
+
+123456- fatal error: unexpectedly found nil while unwrapping an Optional value- expression unexpectedly raised an error: Error Domain=NSCocoaErrorDomain Code=3840 &amp;quot;Unescape">
+<meta property="og:updated_time" content="2016-08-18T13:50:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift 中枚举高级用法及实践">
-<meta name="twitter:description" content="Swift 中枚举高级用法及实践本文是一篇详细且具有实战意义的教程，涵盖几乎所有枚举(Enum)知识点，为你解答Swift中枚举的应用场合以及使用方法。
-和switch语句类似，Swift中的枚举乍看之下更像是C语言中枚举的进阶版本，即允许你定义一种类型，用于表示普通事情中某种用例。不过深入挖掘之后，凭借Swift背后特别的设计理念，相比较C语言枚举来说其在实际场景中的应用更为广泛。特别是作为强大">
+<meta name="twitter:title" content="swift中获取到的json数据解析出错">
+<meta name="twitter:description" content="swift中获取json数据出错
+报错原因
+
+123456- fatal error: unexpectedly found nil while unwrapping an Optional value- expression unexpectedly raised an error: Error Domain=NSCocoaErrorDomain Code=3840 &amp;quot;Unescape">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -59,7 +65,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Swift 中枚举高级用法及实践 | Sloky</title>
+<title>swift中获取到的json数据解析出错 | Sloky</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -248,11 +254,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-swift_中枚举高级用法及实践" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-swift中获取到的json数据解析出错" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/31/swift_中枚举高级用法及实践/" class="article-date">
-      <time datetime="2016-07-31T15:05:15.000Z" itemprop="datePublished">2016-07-31</time>
+      <a href="/2016/08/18/swift中获取到的json数据解析出错/" class="article-date">
+      <time datetime="2016-08-18T13:49:39.000Z" itemprop="datePublished">2016-08-18</time>
 </a>
     </div>
   
@@ -265,7 +271,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Swift 中枚举高级用法及实践
+      swift中获取到的json数据解析出错
     </h1>
   
 
@@ -282,20 +288,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Swift-中枚举高级用法及实践"><a href="#Swift-中枚举高级用法及实践" class="headerlink" title="Swift 中枚举高级用法及实践"></a>Swift 中枚举高级用法及实践</h1><p>本文是一篇详细且具有实战意义的教程，涵盖几乎所有枚举(Enum)知识点，为你解答Swift中枚举的应用场合以及使用方法。</p>
-<p>和switch语句类似，Swift中的枚举乍看之下更像是C语言中枚举的进阶版本，即允许你定义一种类型，用于表示普通事情中某种用例。不过深入挖掘之后，凭借Swift背后特别的设计理念，相比较C语言枚举来说其在实际场景中的应用更为广泛。特别是作为强大的工具，Swift中的枚举能够清晰表达代码的意图。</p>
-<p>本文中，我们将首先了解基础语法和使用枚举的可能性，接着通过实战教你如何以及何时使用枚举。最后我们还会大致了解下Swift标准库中枚举是如何被使用的。<br><a id="more"></a><br>正式开始学习之前，先给出枚举的定义。之后我们将回过头再来讨论它。</p>
-<p>枚举声明的类型是囊括可能状态的有限集，且可以具有附加值。通过内嵌(nesting),方法(method),关联值(associated values)和模式匹配(pattern matching),枚举可以分层次地定义任何有组织的数据。</p>
-<h2 id="深入理解-Diving-In"><a href="#深入理解-Diving-In" class="headerlink" title="深入理解(Diving In)"></a>深入理解(Diving In)</h2><hr>
-<p>简要概述如何定义和使用枚举。  </p>
-<h3 id="定义基本的枚举类型-Defining-Basic-Enums"><a href="#定义基本的枚举类型-Defining-Basic-Enums" class="headerlink" title="定义基本的枚举类型(Defining Basic Enums)"></a>定义基本的枚举类型(Defining Basic Enums)</h3><p>试想我们正在开发一款游戏，玩家能够朝四个方向移动。所以喽，玩家的运动轨迹受到了限制。显然，我们能够使用枚举来表述这一情况:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">enum Movement&#123;</div><div class="line">case Left</div><div class="line">case Right</div><div class="line">case Top</div><div class="line">case Bottom</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>紧接着，你可以使用多种模式匹配结构获取到Movement的枚举值，或者按照特定情况执行操作:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">let aMovement = Movement.Left</div><div class="line">// switch 分情况处理</div><div class="line">switch aMovement&#123;</div><div class="line">case .Left: print(&quot;left&quot;)</div><div class="line">default:()</div><div class="line">&#125;</div><div class="line">// 明确的case情况</div><div class="line">if case .Left = aMovement&#123;</div><div class="line">print(&quot;left&quot;)</div><div class="line">&#125;</div><div class="line">if aMovement == .Left &#123; </div><div class="line">	print(&quot;left&quot;) </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>案例中，我们无须明确指出enum的实际名称(即case Move.Left:print(“Left”))。因为类型检查器能够自动为此进行类型推算。这对于那些UIKit以及AppKit中错综复杂的枚举是灰常有用的。</p>
-<p>###枚举值(Enum Values)<br>当然，你可能想要为<strong>enum</strong>中每个<strong>case</strong>分配一个值。这相当有用，比如枚举自身实际与某事或某物挂钩时，往往这些东西又需要使用不同类型来表述。在C语言中，你只能为枚举<strong>case</strong>分配整型值，而<strong>Swift</strong>则提供了更多的灵活性。     </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">// 映射到整型</div><div class="line">enum Movement: Int &#123;</div><div class="line">case Left = 0</div><div class="line">case Right = 1</div><div class="line">case Top = 2</div><div class="line">case Bottom = 3</div><div class="line">&#125;&gt; </div><div class="line">// 同样你可以与字符串一一对应</div><div class="line">enum House: String &#123;</div><div class="line">case Baratheon = &quot;Ours is the Fury&quot;</div><div class="line">case Greyjoy = &quot;We Do Not Sow&quot;</div><div class="line">case Martell = &quot;Unbowed, Unbent, Unbroken&quot;</div><div class="line">case Stark = &quot;Winter is Coming&quot;</div><div class="line">case Tully = &quot;Family, Duty, Honor&quot;</div><div class="line">case Tyrell = &quot;Growing Strong&quot;</div><div class="line">&#125;</div><div class="line">// 或者float double都可以(同时注意枚举中的花式unicode)</div><div class="line">enum Constants: Double &#123;</div><div class="line">case π = 3.14159</div><div class="line">case e = 2.71828</div><div class="line">case φ = 1.61803398874</div><div class="line">case λ = 1.30357</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+        <h1 id="swift中获取json数据出错"><a href="#swift中获取json数据出错" class="headerlink" title="swift中获取json数据出错"></a>swift中获取json数据出错</h1><ul>
+<li>报错原因</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- fatal error: unexpectedly found nil while unwrapping an Optional value</div><div class="line"></div><div class="line">- expression unexpectedly raised an error: Error Domain=NSCocoaErrorDomain Code=3840 &quot;Unescaped control character around character 34.&quot; UserInfo=&#123;NSDebugDescription=Unescaped control character around character 34.&#125;: file /Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-703.0.18.8/src/swift/stdlib/public/core/ErrorType.swift, line 54 </div><div class="line">&lt;!-- more --&gt;</div><div class="line"></div><div class="line">- 1011错误</div></pre></td></tr></table></figure>
+<ul>
+<li>报错原因分析</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. AFNetworking默认的reponse数据格式是json</div><div class="line">2. 获取到的数据不是标准的json格式数据</div><div class="line">	- 含有html标签</div><div class="line">	- 含有特殊字符，譬如换行，&amp;nbsp; 等</div></pre></td></tr></table></figure>
+<ul>
+<li>解决AFNetworking默认的reponse数据格式是json</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. 默认是AFJSONResponseSerializer,这里改成AFHTTPResponseSerializer,表示返回的是二进制数据</div><div class="line">NetworkTools.shareInstance.responseSerializer = AFHTTPResponseSerializer()</div><div class="line">//NetworkTools.shareInstance.requestSerializer = AFHTTPRequestSerializer()</div><div class="line">//NetworkTools.shareInstance.requestSerializer.setValue(&quot;application/json,text/html,text/plain&quot;, forHTTPHeaderField: &quot;Accept&quot;)        //NetworkTools.shareInstance.requestSerializer.setValue(&quot;application/json; charset=utf-8&quot;, forHTTPHeaderField: &quot;Content-Type&quot;)</div><div class="line">2. 把二进制数据转换成字符串</div><div class="line">	let str = String.init(data: objc as! NSData, encoding: NSUTF8StringEncoding)</div></pre></td></tr></table></figure>
+<ul>
+<li>去除html标签</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">func removeHtml (str: String) -&gt; String &#123;</div><div class="line">    var theScanner: NSScanner</div><div class="line">    var text : NSString?</div><div class="line">    theScanner = NSScanner.localizedScannerWithString(str) as! NSScanner</div><div class="line">    var resultStr : String = str</div><div class="line">    while (!theScanner.atEnd) &#123;</div><div class="line">        // find start of tag</div><div class="line">        theScanner.scanUpToString(&quot;&lt;&quot;, intoString: nil)</div><div class="line">        // find end of tag</div><div class="line">        theScanner.scanUpToString(&quot;&gt;&quot;, intoString: &amp;text)</div><div class="line">        if (text != nil) &#123;</div><div class="line">            resultStr = resultStr.stringByReplacingOccurrencesOfString(String.init(format: &quot;%@&gt;&quot;, text!), withString: &quot;&quot;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return resultStr</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>去掉特殊字符</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func decodeText(str:String) -&gt; String &#123;</div><div class="line">    var resultStr = str</div><div class="line">    resultStr = resultStr.stringByReplacingOccurrencesOfString(&quot;\r&quot;, withString: &quot;\\r&quot;).stringByReplacingOccurrencesOfString(&quot;\n&quot;, withString: &quot;\\n&quot;).stringByReplacingOccurrencesOfString(&quot;\t&quot;, withString: &quot;\\t&quot;).stringByReplacingOccurrencesOfString(&quot;&amp;nbsp;&quot;,withString: &quot;&quot;)</div><div class="line">    return resultStr</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -303,13 +315,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/31/swift_中枚举高级用法及实践/">Swift 中枚举高级用法及实践</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/18/swift中获取到的json数据解析出错/">swift中获取到的json数据解析出错</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Sloky Xu</a></p>
-        <p><span>发布时间:</span>2016-07-31, 23:05:15</p>
-        <p><span>最后更新:</span>2016-08-06, 11:10:34</p>
+        <p><span>发布时间:</span>2016-08-18, 21:49:39</p>
+        <p><span>最后更新:</span>2016-08-18, 21:50:12</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/31/swift_中枚举高级用法及实践/" title="Swift 中枚举高级用法及实践">http://weishine121.github.io/2016/07/31/swift_中枚举高级用法及实践/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/07/31/swift_中枚举高级用法及实践/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/18/swift中获取到的json数据解析出错/" title="swift中获取到的json数据解析出错">http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -321,16 +333,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/08/04/swift中怎么用代码画虚线/">
-                    swift中怎么用代码画虚线
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/31/iOS开发之数据存储/">
-                    iOS开发之数据存储
+                <a href="/2016/08/06/swift中的富文本常见用法/">
+                    swift中的富文本常见用法
                 </a>
             </div>
         
@@ -341,7 +347,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Swift-中枚举高级用法及实践"><span class="toc-number">1.</span> <span class="toc-text">Swift 中枚举高级用法及实践</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入理解-Diving-In"><span class="toc-number">1.1.</span> <span class="toc-text">深入理解(Diving In)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义基本的枚举类型-Defining-Basic-Enums"><span class="toc-number">1.1.1.</span> <span class="toc-text">定义基本的枚举类型(Defining Basic Enums)</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#swift中获取json数据出错"><span class="toc-number">1.</span> <span class="toc-text">swift中获取json数据出错</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -372,7 +378,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Swift 中枚举高级用法及实践　| Sloky　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"swift中获取到的json数据解析出错　| Sloky　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -388,7 +394,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/31/swift_中枚举高级用法及实践/" data-title="Swift 中枚举高级用法及实践" data-url="http://weishine121.github.io/2016/07/31/swift_中枚举高级用法及实践/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/08/18/swift中获取到的json数据解析出错/" data-title="swift中获取到的json数据解析出错" data-url="http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/"></div>
     <script>
         var duoshuoQuery = {short_name:"null"};
         var loadComment = function(){
@@ -411,15 +417,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/04/swift中怎么用代码画虚线/" title="上一篇: swift中怎么用代码画虚线">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/31/iOS开发之数据存储/" title="下一篇: iOS开发之数据存储">
+            <a href="/2016/08/06/swift中的富文本常见用法/" title="下一篇: swift中的富文本常见用法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
