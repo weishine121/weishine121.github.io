@@ -15,25 +15,34 @@
 
 
 
-<meta name="description" content="swift中获取json数据出错
-报错原因分析
+<meta name="description" content="#PHP探索之路 - 第一天
 
-12341. AFNetworking默认的reponse数据格式是json2. 获取到的数据不是标准的json格式数据	- 含有html标签	- 含有特殊字符，譬如换行，&amp;amp;nbsp; 等">
+1 . PHP中：xxx.inc.php是某个文件,其中得inc是什么意思？能不能删掉
+
+1234可以，这样写和 xxx.php是一样的，写程序时，为了减少代码量，常常包含某个或多个文件，其中的语法结构就有include（）inc就是include的缩写啦~之所以这样写xxx.inc.php是为了程序员看着方便，看到inc就知道这是一个被包含的文件
+
+2 . is">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swift中获取到的json数据解析出错">
-<meta property="og:url" content="http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/index.html">
+<meta property="og:title" content="PHP探索之路 - 第一天">
+<meta property="og:url" content="http://weishine121.github.io/2016/09/01/Php探索之路 - 第一天/index.html">
 <meta property="og:site_name" content="Sloky">
-<meta property="og:description" content="swift中获取json数据出错
-报错原因分析
+<meta property="og:description" content="#PHP探索之路 - 第一天
 
-12341. AFNetworking默认的reponse数据格式是json2. 获取到的数据不是标准的json格式数据	- 含有html标签	- 含有特殊字符，譬如换行，&amp;amp;nbsp; 等">
-<meta property="og:updated_time" content="2016-08-18T14:17:14.000Z">
+1 . PHP中：xxx.inc.php是某个文件,其中得inc是什么意思？能不能删掉
+
+1234可以，这样写和 xxx.php是一样的，写程序时，为了减少代码量，常常包含某个或多个文件，其中的语法结构就有include（）inc就是include的缩写啦~之所以这样写xxx.inc.php是为了程序员看着方便，看到inc就知道这是一个被包含的文件
+
+2 . is">
+<meta property="og:updated_time" content="2016-09-01T08:25:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swift中获取到的json数据解析出错">
-<meta name="twitter:description" content="swift中获取json数据出错
-报错原因分析
+<meta name="twitter:title" content="PHP探索之路 - 第一天">
+<meta name="twitter:description" content="#PHP探索之路 - 第一天
 
-12341. AFNetworking默认的reponse数据格式是json2. 获取到的数据不是标准的json格式数据	- 含有html标签	- 含有特殊字符，譬如换行，&amp;amp;nbsp; 等">
+1 . PHP中：xxx.inc.php是某个文件,其中得inc是什么意思？能不能删掉
+
+1234可以，这样写和 xxx.php是一样的，写程序时，为了减少代码量，常常包含某个或多个文件，其中的语法结构就有include（）inc就是include的缩写啦~之所以这样写xxx.inc.php是为了程序员看着方便，看到inc就知道这是一个被包含的文件
+
+2 . is">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -65,7 +74,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>swift中获取到的json数据解析出错 | Sloky</title>
+<title>PHP探索之路 - 第一天 | Sloky</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -254,11 +263,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-swift中获取到的json数据解析出错" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Php探索之路 - 第一天" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/18/swift中获取到的json数据解析出错/" class="article-date">
-      <time datetime="2016-08-18T13:49:39.000Z" itemprop="datePublished">2016-08-18</time>
+      <a href="/2016/09/01/Php探索之路 - 第一天/" class="article-date">
+      <time datetime="2016-09-01T02:43:47.000Z" itemprop="datePublished">2016-09-01</time>
 </a>
     </div>
   
@@ -271,7 +280,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      swift中获取到的json数据解析出错
+      PHP探索之路 - 第一天
     </h1>
   
 
@@ -288,31 +297,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="swift中获取json数据出错"><a href="#swift中获取json数据出错" class="headerlink" title="swift中获取json数据出错"></a>swift中获取json数据出错</h1><ul>
-<li>报错原因分析</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. AFNetworking默认的reponse数据格式是json</div><div class="line">2. 获取到的数据不是标准的json格式数据</div><div class="line">	- 含有html标签</div><div class="line">	- 含有特殊字符，譬如换行，&amp;nbsp; 等</div></pre></td></tr></table></figure>
-<a id="more"></a>
+        <a id="more"></a>
+<p>#PHP探索之路 - 第一天</p>
 <ul>
-<li>报错原因</li>
+<li>1 . PHP中：xxx.inc.php是某个文件,其中得inc是什么意思？能不能删掉</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">- fatal error: unexpectedly found nil while unwrapping an Optional value</div><div class="line"></div><div class="line">- expression unexpectedly raised an error: Error Domain=NSCocoaErrorDomain Code=3840 &quot;Unescaped control character around character 34.&quot; UserInfo=&#123;NSDebugDescription=Unescaped control character around character 34.&#125;: file /Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-703.0.18.8/src/swift/stdlib/public/core/ErrorType.swift, line 54 </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">- 1011错误</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">可以，这样写和 xxx.php是一样的，</div><div class="line">写程序时，为了减少代码量，常常包含某个或多个文件，其中的语法结构就有include（）</div><div class="line">inc就是include的缩写啦~</div><div class="line">之所以这样写xxx.inc.php是为了程序员看着方便，看到inc就知道这是一个被包含的文件</div></pre></td></tr></table></figure>
 <ul>
-<li>解决AFNetworking默认的reponse数据格式是json</li>
+<li>2 . isset是什么意思</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">1. 默认是AFJSONResponseSerializer,这里改成AFHTTPResponseSerializer,  </div><div class="line">表示返回的是二进制数据</div><div class="line">NetworkTools.shareInstance.responseSerializer = AFHTTPResponseSerializer()</div><div class="line">//NetworkTools.shareInstance.requestSerializer = AFHTTPRequestSerializer()</div><div class="line">//NetworkTools.shareInstance.requestSerializer  </div><div class="line">.setValue(&quot;application/json,text/html,text/plain&quot;,  </div><div class="line"> forHTTPHeaderField: &quot;Accept&quot;)          </div><div class="line">//NetworkTools.shareInstance.requestSerializer  </div><div class="line">.setValue(&quot;application/json; charset=utf-8&quot;,   </div><div class="line">forHTTPHeaderField: &quot;Content-Type&quot;)</div><div class="line">2. 把二进制数据转换成字符串</div><div class="line">let str = String.init(data: objc as! NSData, encoding: NSUTF8StringEncoding)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">isset() 函数检测是否已设置 &quot;login_endtime&quot; 变量</div></pre></td></tr></table></figure>
 <ul>
-<li>去除html标签</li>
+<li>3 . :: 是什么意思</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">func removeHtml (str: String) -&gt; String &#123;</div><div class="line">    var theScanner: NSScanner</div><div class="line">    var text : NSString?</div><div class="line">    theScanner = NSScanner.localizedScannerWithString(str) as! NSScanner</div><div class="line">    var resultStr : String = str</div><div class="line">    while (!theScanner.atEnd) &#123;</div><div class="line">        // find start of tag</div><div class="line">        theScanner.scanUpToString(&quot;&lt;&quot;, intoString: nil)</div><div class="line">        // find end of tag</div><div class="line">        theScanner.scanUpToString(&quot;&gt;&quot;, intoString: &amp;text)</div><div class="line">        if (text != nil) &#123;</div><div class="line">            resultStr = resultStr.stringByReplacingOccurrencesOfString(  </div><div class="line">String.init(format: &quot;%@&gt;&quot;, text!), withString: &quot;&quot;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return resultStr</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:: 类中 静态方法和静态属性的引用方法</div></pre></td></tr></table></figure>
 <ul>
-<li>去掉特殊字符</li>
+<li>4 . PHP Include 文件</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">func decodeText(str:String) -&gt; String &#123;</div><div class="line">    var resultStr = str</div><div class="line">    resultStr = resultStr  </div><div class="line">.stringByReplacingOccurrencesOfString(&quot;\r&quot;, withString: &quot;\\r&quot;)  </div><div class="line">.stringByReplacingOccurrencesOfString(&quot;\n&quot;, withString: &quot;\\n&quot;)  </div><div class="line">.stringByReplacingOccurrencesOfString(&quot;\t&quot;, withString: &quot;\\t&quot;)  </div><div class="line">.stringByReplacingOccurrencesOfString(&quot;&amp;nbsp;&quot;,withString: &quot;&quot;)</div><div class="line">    return resultStr</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>最后别忘了 把字符串转成json</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let jsonData = str4!.dataUsingEncoding(NSUTF8StringEncoding)</div><div class="line">let json = try? NSJSONSerialization.JSONObjectWithData(jsonData!,     </div><div class="line">options: NSJSONReadingOptions.AllowFragments)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">通过 include 或 require 语句，可以将 PHP 文件的内容插入另一个 PHP 文件（在服务器执行它之前）。</div><div class="line">include 和 require 语句是相同的，除了错误处理方面：</div><div class="line">   - require 会生成致命错误（E_COMPILE_ERROR）并停止脚本</div><div class="line">   - include 只生成警告（E_WARNING），并且脚本会继续</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -320,13 +323,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/18/swift中获取到的json数据解析出错/">swift中获取到的json数据解析出错</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/01/Php探索之路 - 第一天/">PHP探索之路 - 第一天</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Sloky Xu</a></p>
-        <p><span>发布时间:</span>2016-08-18, 21:49:39</p>
-        <p><span>最后更新:</span>2016-08-18, 22:17:14</p>
+        <p><span>发布时间:</span>2016-09-01, 10:43:47</p>
+        <p><span>最后更新:</span>2016-09-01, 16:25:37</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/18/swift中获取到的json数据解析出错/" title="swift中获取到的json数据解析出错">http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/01/Php探索之路 - 第一天/" title="PHP探索之路 - 第一天">http://weishine121.github.io/2016/09/01/Php探索之路 - 第一天/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/09/01/Php探索之路 - 第一天/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -338,16 +341,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/09/01/Php探索之路 - 第一天/">
-                    PHP探索之路 - 第一天
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/08/06/swift中的富文本常见用法/">
-                    swift中的富文本常见用法
+                <a href="/2016/08/18/swift中获取到的json数据解析出错/">
+                    swift中获取到的json数据解析出错
                 </a>
             </div>
         
@@ -358,7 +355,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#swift中获取json数据出错"><span class="toc-number">1.</span> <span class="toc-text">swift中获取json数据出错</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn,
@@ -389,7 +386,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"swift中获取到的json数据解析出错　| Sloky　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"PHP探索之路 - 第一天　| Sloky　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -405,7 +402,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/08/18/swift中获取到的json数据解析出错/" data-title="swift中获取到的json数据解析出错" data-url="http://weishine121.github.io/2016/08/18/swift中获取到的json数据解析出错/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/09/01/Php探索之路 - 第一天/" data-title="PHP探索之路 - 第一天" data-url="http://weishine121.github.io/2016/09/01/Php探索之路 - 第一天/"></div>
     <script>
         var duoshuoQuery = {short_name:"null"};
         var loadComment = function(){
@@ -428,15 +425,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/01/Php探索之路 - 第一天/" title="上一篇: PHP探索之路 - 第一天">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/08/06/swift中的富文本常见用法/" title="下一篇: swift中的富文本常见用法">
+            <a href="/2016/08/18/swift中获取到的json数据解析出错/" title="下一篇: swift中获取到的json数据解析出错">
                 <i class="fa fa-angle-right"></i>
             </a>
         
