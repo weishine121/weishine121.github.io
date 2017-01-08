@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="一、iOS应用数据存储的常用方式12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
+<meta name="description" content="&amp;#x4E00;&amp;#x3001;iOS&amp;#x5E94;&amp;#x7528;&amp;#x6570;&amp;#x636E;&amp;#x5B58;&amp;#x50A8;&amp;#x7684;&amp;#x5E38;&amp;#x7528;&amp;#x65B9;&amp;#x5F0F;12345- XML&amp;#x5C5E;&amp;#x6027;&amp;#x5217;&amp;#x8868;&amp;#xFF08;plist&amp;#xFF09;&amp;#x5F52;&amp;#x6863;- Preference(&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS开发之数据存储">
 <meta property="og:url" content="http://weishine121.github.io/2016/07/31/iOS开发之数据存储/index.html">
 <meta property="og:site_name" content="Sloky">
-<meta property="og:description" content="一、iOS应用数据存储的常用方式12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
+<meta property="og:description" content="&amp;#x4E00;&amp;#x3001;iOS&amp;#x5E94;&amp;#x7528;&amp;#x6570;&amp;#x636E;&amp;#x5B58;&amp;#x50A8;&amp;#x7684;&amp;#x5E38;&amp;#x7528;&amp;#x65B9;&amp;#x5F0F;12345- XML&amp;#x5C5E;&amp;#x6027;&amp;#x5217;&amp;#x8868;&amp;#xFF08;plist&amp;#xFF09;&amp;#x5F52;&amp;#x6863;- Preference(&amp;">
 <meta property="og:updated_time" content="2016-07-31T14:38:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS开发之数据存储">
-<meta name="twitter:description" content="一、iOS应用数据存储的常用方式12345- XML属性列表（plist）归档- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。- SQLite3 当非常大量的数据存储时使用- Core Data 就是对SQLite的封装">
+<meta name="twitter:description" content="&amp;#x4E00;&amp;#x3001;iOS&amp;#x5E94;&amp;#x7528;&amp;#x6570;&amp;#x636E;&amp;#x5B58;&amp;#x50A8;&amp;#x7684;&amp;#x5E38;&amp;#x7528;&amp;#x65B9;&amp;#x5F0F;12345- XML&amp;#x5C5E;&amp;#x6027;&amp;#x5217;&amp;#x8868;&amp;#xFF08;plist&amp;#xFF09;&amp;#x5F52;&amp;#x6863;- Preference(&amp;">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -137,13 +137,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -243,7 +243,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-iOS开发之数据存储" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -283,109 +283,109 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="一、iOS应用数据存储的常用方式"><a href="#一、iOS应用数据存储的常用方式" class="headerlink" title="一、iOS应用数据存储的常用方式"></a>一、iOS应用数据存储的常用方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- XML属性列表（plist）归档</div><div class="line">- Preference(偏好设置) 本质还是通过“plist”来存储数据, 但是使用更简单(无需关注文件、文件夹路径和名称)</div><div class="line">- NSKeyedArchiver归档(NSCoding) 把任何对象, 直接保存为文件的方式。</div><div class="line">- SQLite3 当非常大量的数据存储时使用</div><div class="line">- Core Data 就是对SQLite的封装</div></pre></td></tr></table></figure>
+        <h2 id="&#x4E00;&#x3001;iOS&#x5E94;&#x7528;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x5F0F;"><a href="#&#x4E00;&#x3001;iOS&#x5E94;&#x7528;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x5F0F;" class="headerlink" title="&#x4E00;&#x3001;iOS&#x5E94;&#x7528;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x5F0F;"></a>&#x4E00;&#x3001;iOS&#x5E94;&#x7528;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x5F0F;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- XML&#x5C5E;&#x6027;&#x5217;&#x8868;&#xFF08;plist&#xFF09;&#x5F52;&#x6863;</div><div class="line">- Preference(&#x504F;&#x597D;&#x8BBE;&#x7F6E;) &#x672C;&#x8D28;&#x8FD8;&#x662F;&#x901A;&#x8FC7;&#x201C;plist&#x201D;&#x6765;&#x5B58;&#x50A8;&#x6570;&#x636E;, &#x4F46;&#x662F;&#x4F7F;&#x7528;&#x66F4;&#x7B80;&#x5355;(&#x65E0;&#x9700;&#x5173;&#x6CE8;&#x6587;&#x4EF6;&#x3001;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&#x548C;&#x540D;&#x79F0;)</div><div class="line">- NSKeyedArchiver&#x5F52;&#x6863;(NSCoding) &#x628A;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;, &#x76F4;&#x63A5;&#x4FDD;&#x5B58;&#x4E3A;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x3002;</div><div class="line">- SQLite3 &#x5F53;&#x975E;&#x5E38;&#x5927;&#x91CF;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x65F6;&#x4F7F;&#x7528;</div><div class="line">- Core Data &#x5C31;&#x662F;&#x5BF9;SQLite&#x7684;&#x5C01;&#x88C5;</div></pre></td></tr></table></figure>
  <a id="more"></a>
-<h2 id="二、获取路径"><a href="#二、获取路径" class="headerlink" title="二、获取路径"></a>二、获取路径</h2><pre><code>- 获取bundle路径
+<h2 id="&#x4E8C;&#x3001;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;"><a href="#&#x4E8C;&#x3001;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;" class="headerlink" title="&#x4E8C;&#x3001;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;"></a>&#x4E8C;&#x3001;&#x83B7;&#x53D6;&#x8DEF;&#x5F84;</h2><pre><code>- &#x83B7;&#x53D6;bundle&#x8DEF;&#x5F84;
 
   NSString *path = [NSBundle mainBundle].bundlePath;
 
--获取沙盒路径
+-&#x83B7;&#x53D6;&#x6C99;&#x76D2;&#x8DEF;&#x5F84;
 
   NSString *home = NSHomeDirectory();
-</code></pre><h2 id="三、沙盒路径目录结构"><a href="#三、沙盒路径目录结构" class="headerlink" title="三、沙盒路径目录结构"></a>三、沙盒路径目录结构</h2><pre><code>-Document          保存应用运行时生成的需要持久化的数据
+</code></pre><h2 id="&#x4E09;&#x3001;&#x6C99;&#x76D2;&#x8DEF;&#x5F84;&#x76EE;&#x5F55;&#x7ED3;&#x6784;"><a href="#&#x4E09;&#x3001;&#x6C99;&#x76D2;&#x8DEF;&#x5F84;&#x76EE;&#x5F55;&#x7ED3;&#x6784;" class="headerlink" title="&#x4E09;&#x3001;&#x6C99;&#x76D2;&#x8DEF;&#x5F84;&#x76EE;&#x5F55;&#x7ED3;&#x6784;"></a>&#x4E09;&#x3001;&#x6C99;&#x76D2;&#x8DEF;&#x5F84;&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h2><pre><code>-Document          &#x4FDD;&#x5B58;&#x5E94;&#x7528;&#x8FD0;&#x884C;&#x65F6;&#x751F;&#x6210;&#x7684;&#x9700;&#x8981;&#x6301;&#x4E45;&#x5316;&#x7684;&#x6570;&#x636E;
 -library
-    Caches         保存应用运行时生成的需要持久化的数据
-    Preferences    保存应用的所有偏好设置
--temp              保存应用运行时所需的临时数据
-</code></pre><h2 id="四、利用沙盒根目录拼接”Documents”字符串"><a href="#四、利用沙盒根目录拼接”Documents”字符串" class="headerlink" title="四、利用沙盒根目录拼接”Documents”字符串"></a>四、利用沙盒根目录拼接”Documents”字符串</h2><ul>
-<li><p>方式一：（拼接字符串）</p>
+    Caches         &#x4FDD;&#x5B58;&#x5E94;&#x7528;&#x8FD0;&#x884C;&#x65F6;&#x751F;&#x6210;&#x7684;&#x9700;&#x8981;&#x6301;&#x4E45;&#x5316;&#x7684;&#x6570;&#x636E;
+    Preferences    &#x4FDD;&#x5B58;&#x5E94;&#x7528;&#x7684;&#x6240;&#x6709;&#x504F;&#x597D;&#x8BBE;&#x7F6E;
+-temp              &#x4FDD;&#x5B58;&#x5E94;&#x7528;&#x8FD0;&#x884C;&#x65F6;&#x6240;&#x9700;&#x7684;&#x4E34;&#x65F6;&#x6570;&#x636E;
+</code></pre><h2 id="&#x56DB;&#x3001;&#x5229;&#x7528;&#x6C99;&#x76D2;&#x6839;&#x76EE;&#x5F55;&#x62FC;&#x63A5;&#x201D;Documents&#x201D;&#x5B57;&#x7B26;&#x4E32;"><a href="#&#x56DB;&#x3001;&#x5229;&#x7528;&#x6C99;&#x76D2;&#x6839;&#x76EE;&#x5F55;&#x62FC;&#x63A5;&#x201D;Documents&#x201D;&#x5B57;&#x7B26;&#x4E32;" class="headerlink" title="&#x56DB;&#x3001;&#x5229;&#x7528;&#x6C99;&#x76D2;&#x6839;&#x76EE;&#x5F55;&#x62FC;&#x63A5;&#x201D;Documents&#x201D;&#x5B57;&#x7B26;&#x4E32;"></a>&#x56DB;&#x3001;&#x5229;&#x7528;&#x6C99;&#x76D2;&#x6839;&#x76EE;&#x5F55;&#x62FC;&#x63A5;&#x201D;Documents&#x201D;&#x5B57;&#x7B26;&#x4E32;</h2><ul>
+<li><p>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#xFF08;&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</p>
 <pre><code>NSString *home =NSHomeDirectory();
-NSString *documents = [home stringByAppendingString:@“/Documents&quot;];
+NSString *documents = [home stringByAppendingString:@&#x201C;/Documents&quot;];
 </code></pre></li>
-<li><p>方式二：(作为路径的一部分)</p>
+<li><p>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;(&#x4F5C;&#x4E3A;&#x8DEF;&#x5F84;&#x7684;&#x4E00;&#x90E8;&#x5206;)</p>
 <pre><code>NSString *home =NSHomeDirectory();
 NSString*documents =[homestringByAppendingPathComponent:@&quot;Documents&quot;];
 </code></pre></li>
-<li><p>方式三：（）</p>
-<pre><code>参数1：目标文件，参数二：作用域， 参数三：是否展开波浪线
+<li><p>&#x65B9;&#x5F0F;&#x4E09;&#xFF1A;&#xFF08;&#xFF09;</p>
+<pre><code>&#x53C2;&#x6570;1&#xFF1A;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF0C;&#x53C2;&#x6570;&#x4E8C;&#xFF1A;&#x4F5C;&#x7528;&#x57DF;&#xFF0C; &#x53C2;&#x6570;&#x4E09;&#xFF1A;&#x662F;&#x5426;&#x5C55;&#x5F00;&#x6CE2;&#x6D6A;&#x7EBF;
 
 [NSSearchPathForDirectoriesInDomains(&lt;#NSSearchPathDirectory directory#&gt;, &lt;#NSSearchPathDomainMask domainMask#&gt;, &lt;#BOOL expandTilde#&gt;)]
 
 NSString * documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 </code></pre></li>
 </ul>
-<h2 id="五、获取caches文件夹路径"><a href="#五、获取caches文件夹路径" class="headerlink" title="五、获取caches文件夹路径"></a>五、获取caches文件夹路径</h2><p>//获取caches文件夹    </p>
+<h2 id="&#x4E94;&#x3001;&#x83B7;&#x53D6;caches&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;"><a href="#&#x4E94;&#x3001;&#x83B7;&#x53D6;caches&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;" class="headerlink" title="&#x4E94;&#x3001;&#x83B7;&#x53D6;caches&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;"></a>&#x4E94;&#x3001;&#x83B7;&#x53D6;caches&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;</h2><p>//&#x83B7;&#x53D6;caches&#x6587;&#x4EF6;&#x5939;    </p>
 <pre><code>NSString * cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, NO) lastObject];
-</code></pre><h2 id="六、获取偏好设置文件夹路径"><a href="#六、获取偏好设置文件夹路径" class="headerlink" title="六、获取偏好设置文件夹路径"></a>六、获取偏好设置文件夹路径</h2><pre><code>NSTemporaryDirectory（）
-</code></pre><h2 id="七、plist数据的存储与读取"><a href="#七、plist数据的存储与读取" class="headerlink" title="七、plist数据的存储与读取"></a>七、plist数据的存储与读取</h2><ul>
-<li>//数据存储</li>
+</code></pre><h2 id="&#x516D;&#x3001;&#x83B7;&#x53D6;&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;"><a href="#&#x516D;&#x3001;&#x83B7;&#x53D6;&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;" class="headerlink" title="&#x516D;&#x3001;&#x83B7;&#x53D6;&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;"></a>&#x516D;&#x3001;&#x83B7;&#x53D6;&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;</h2><pre><code>NSTemporaryDirectory&#xFF08;&#xFF09;
+</code></pre><h2 id="&#x4E03;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;"><a href="#&#x4E03;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;" class="headerlink" title="&#x4E03;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;"></a>&#x4E03;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;</h2><ul>
+<li>//&#x6570;&#x636E;&#x5B58;&#x50A8;</li>
 </ul>
-<pre><code>    NSArray * names = [NSArray arrayWithObjects:@&quot;Bob&quot;,@&quot;王宝&quot;, @&quot;球童&quot;,@&quot;Jack&quot;,nil];
+<pre><code>    NSArray * names = [NSArray arrayWithObjects:@&quot;Bob&quot;,@&quot;&#x738B;&#x5B9D;&quot;, @&quot;&#x7403;&#x7AE5;&quot;,@&quot;Jack&quot;,nil];
 
-  // 1.获取路径
+  // 1.&#x83B7;&#x53D6;&#x8DEF;&#x5F84;
  NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 
-  // 2.拼接文件名
+  // 2.&#x62FC;&#x63A5;&#x6587;&#x4EF6;&#x540D;
 
 NSString * filePath = [path stringByAppendingPathComponent:@&quot;names.plist&quot;];
 
-// 3. 存储
-// atomically 是否允许原子写入
+// 3. &#x5B58;&#x50A8;
+// atomically &#x662F;&#x5426;&#x5141;&#x8BB8;&#x539F;&#x5B50;&#x5199;&#x5165;
 [names writeToFile:filePath atomically:YES];
 
 NSLog(@&quot;%@&quot;,filePath);
 </code></pre><hr>
 <ul>
-<li>读取数据</li>
+<li>&#x8BFB;&#x53D6;&#x6570;&#x636E;</li>
 </ul>
-<pre><code>//1.获取数据路径
+<pre><code>//1.&#x83B7;&#x53D6;&#x6570;&#x636E;&#x8DEF;&#x5F84;
 NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 
-//2.拼接文件路径
+//2.&#x62FC;&#x63A5;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
 
 NSString * filePath = [path stringByAppendingPathComponent:@&quot;names.plist&quot;];
 
-//3.读取数据
+//3.&#x8BFB;&#x53D6;&#x6570;&#x636E;
 
 NSArray * names = [NSArray arrayWithContentsOfFile:filePath];
 
 NSLog(@&quot;%@&quot;,names);
-</code></pre><h2 id="八、plist数据的存储与读取"><a href="#八、plist数据的存储与读取" class="headerlink" title="八、plist数据的存储与读取"></a>八、plist数据的存储与读取</h2><ul>
-<li><p>//偏好设置存储</p>
-<p>  //1.获取NSUserDefaults对象<br>  NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];</p>
-<p>  //2.存储数据<br>  [userDefaults setObject:@”Jack” forKey:@”name”];</p>
-<p>  [userDefaults setInteger:23 forKey:@”age”];</p>
-<p>  [userDefaults setBool:YES forKey:@”sex”];</p>
-<p>  //3.立即存储<br>  [userDefaults synchronize];</p>
-<p>  NSLog(@”%@”,NSHomeDirectory());</p>
+</code></pre><h2 id="&#x516B;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;"><a href="#&#x516B;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;" class="headerlink" title="&#x516B;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;"></a>&#x516B;&#x3001;plist&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x8BFB;&#x53D6;</h2><ul>
+<li><p>//&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#x5B58;&#x50A8;</p>
+<p>  //1.&#x83B7;&#x53D6;NSUserDefaults&#x5BF9;&#x8C61;<br>  NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];</p>
+<p>  //2.&#x5B58;&#x50A8;&#x6570;&#x636E;<br>  [userDefaults setObject:@&#x201D;Jack&#x201D; forKey:@&#x201D;name&#x201D;];</p>
+<p>  [userDefaults setInteger:23 forKey:@&#x201D;age&#x201D;];</p>
+<p>  [userDefaults setBool:YES forKey:@&#x201D;sex&#x201D;];</p>
+<p>  //3.&#x7ACB;&#x5373;&#x5B58;&#x50A8;<br>  [userDefaults synchronize];</p>
+<p>  NSLog(@&#x201D;%@&#x201D;,NSHomeDirectory());</p>
 </li>
 </ul>
 <hr>
 <ul>
-<li><p>//读取偏好设置</p>
-<p>  //1.获取NSUserDefaults对象<br>  NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];</p>
-<p>  //2.读取数据<br>  NSString * name = [userDefaults objectForKey:@”name”];</p>
-<p>  NSInteger age = [userDefaults integerForKey:@”age”];</p>
-<p>  BOOL sex = [userDefaults boolForKey:@”sex”];</p>
-<p>  NSLog(@”name =%@  age = %ld sex = %d”,name,age,sex);</p>
+<li><p>//&#x8BFB;&#x53D6;&#x504F;&#x597D;&#x8BBE;&#x7F6E;</p>
+<p>  //1.&#x83B7;&#x53D6;NSUserDefaults&#x5BF9;&#x8C61;<br>  NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];</p>
+<p>  //2.&#x8BFB;&#x53D6;&#x6570;&#x636E;<br>  NSString * name = [userDefaults objectForKey:@&#x201D;name&#x201D;];</p>
+<p>  NSInteger age = [userDefaults integerForKey:@&#x201D;age&#x201D;];</p>
+<p>  BOOL sex = [userDefaults boolForKey:@&#x201D;sex&#x201D;];</p>
+<p>  NSLog(@&#x201D;name =%@  age = %ld sex = %d&#x201D;,name,age,sex);</p>
 </li>
 </ul>
-<h2 id="九、归档与反归档"><a href="#九、归档与反归档" class="headerlink" title="九、归档与反归档"></a>九、归档与反归档</h2><p>“归档”：是一种可以把任何对象，直接保存为文件的方式。</p>
+<h2 id="&#x4E5D;&#x3001;&#x5F52;&#x6863;&#x4E0E;&#x53CD;&#x5F52;&#x6863;"><a href="#&#x4E5D;&#x3001;&#x5F52;&#x6863;&#x4E0E;&#x53CD;&#x5F52;&#x6863;" class="headerlink" title="&#x4E5D;&#x3001;&#x5F52;&#x6863;&#x4E0E;&#x53CD;&#x5F52;&#x6863;"></a>&#x4E5D;&#x3001;&#x5F52;&#x6863;&#x4E0E;&#x53CD;&#x5F52;&#x6863;</h2><p>&#x201C;&#x5F52;&#x6863;&#x201D;&#xFF1A;&#x662F;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x628A;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x4FDD;&#x5B58;&#x4E3A;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
 <ul>
-<li>如果对象是NSString、NSDictionary、NSArray、NSData、NSNumber等类型，可以直接用NSKeyedArchiver进行归档和恢复</li>
-<li>不是所有的对象都可以直接用这种方法进行归档，只有遵守了NSCoding协议的对象才可以</li>
-<li>NSCoding协议有2个方法：</li>
+<li>&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x662F;NSString&#x3001;NSDictionary&#x3001;NSArray&#x3001;NSData&#x3001;NSNumber&#x7B49;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;NSKeyedArchiver&#x8FDB;&#x884C;&#x5F52;&#x6863;&#x548C;&#x6062;&#x590D;</li>
+<li>&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5F52;&#x6863;&#xFF0C;&#x53EA;&#x6709;&#x9075;&#x5B88;&#x4E86;NSCoding&#x534F;&#x8BAE;&#x7684;&#x5BF9;&#x8C61;&#x624D;&#x53EF;&#x4EE5;</li>
+<li>NSCoding&#x534F;&#x8BAE;&#x6709;2&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</li>
 <li><p>encodeWithCoder:</p>
-<p>   每次归档对象时，都会调用这个方法。一般在这个方法里面指定如何归档对象中的每个实例变量，可以使用encodeObject:forKey:方法归档实例变量</p>
+<p>   &#x6BCF;&#x6B21;&#x5F52;&#x6863;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x4E00;&#x822C;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x6307;&#x5B9A;&#x5982;&#x4F55;&#x5F52;&#x6863;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;encodeObject:forKey:&#x65B9;&#x6CD5;&#x5F52;&#x6863;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;</p>
 </li>
 <li><p>initWithCoder:</p>
-<p>   每次从文件中恢复(解码)对象时，都会调用这个方法。一般在这个方法里面指定如何解码文件中的数据为对象的实例变量，可以使用decodeObject:forKey方法解码实例变量</p>
+<p>   &#x6BCF;&#x6B21;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x6062;&#x590D;(&#x89E3;&#x7801;)&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x4E00;&#x822C;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x6307;&#x5B9A;&#x5982;&#x4F55;&#x89E3;&#x7801;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;decodeObject:forKey&#x65B9;&#x6CD5;&#x89E3;&#x7801;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;</p>
 </li>
 </ul>
-<p><em>CZPerson.h</em><br>[x] 注意：改方法要遵守NSCodiing协议<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">@interface CZPerson : NSObject&lt;NSCoding</div><div class="line">@property (nonatomic,copy) NSString * name;</div><div class="line">@property (nonatomic,copy) NSString * phone;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
-<p><em>CZPerson.m</em><br>[x] 注意：实现NSCodiing协议的方法*<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#import &quot;CZPerson.h&quot;</div><div class="line"></div><div class="line">@implementation CZPerson</div><div class="line">//确定要存储对象的哪些属性</div><div class="line">- (void)encodeWithCoder:(NSCoder *)aCoder</div><div class="line">&#123;</div><div class="line">    [aCoder encodeObject:self.name forKey:@&quot;name&quot;];</div><div class="line">    [aCoder encodeObject:self.phone forKey:@&quot;phone&quot;];</div><div class="line">&#125;</div><div class="line">//确定要读取对象的哪些属性</div><div class="line"></div><div class="line">- (id)initWithCoder:(NSCoder *)aDecoder</div><div class="line">&#123;</div><div class="line">    if(self = [super init])</div><div class="line">    &#123;</div><div class="line">        self.name = [aDecoder decodeObjectForKey:@&quot;name&quot;];</div><div class="line">        self.phone = [aDecoder decodeObjectForKey:@&quot;phone&quot;];</div><div class="line">    &#125;</div><div class="line">    return self;</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
-<p><em>ViewController.m</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &quot;CZPerson.h&quot;</div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    // Do any additional setup after loading the view, typically from a nib.</div><div class="line">    //反归档 (反序列化)</div><div class="line"></div><div class="line">    //1.获取路径</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //2.拼接文件名</div><div class="line"></div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    //3.通过反归档读取数据</div><div class="line"></div><div class="line">    CZPerson * p = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];</div><div class="line">    NSLog(@&quot;name =%@  phone = %@&quot;,p.name,p.phone);</div><div class="line">//    [self test01];</div><div class="line">&#125;</div><div class="line">//归档 (序列化)</div><div class="line">- (void) test01</div><div class="line">&#123;</div><div class="line">    //创建person对象</div><div class="line">    CZPerson * person = [[CZPerson alloc] init];</div><div class="line"></div><div class="line">    //赋值</div><div class="line">    person.name = @&quot;JackMeng&quot;;</div><div class="line">    person.phone = @&quot;186000001&quot;;</div><div class="line"></div><div class="line">    //获取路径</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //拼接文件名</div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    // 归档</div><div class="line"></div><div class="line">    [NSKeyedArchiver archiveRootObject:person toFile:filePath];</div><div class="line"></div><div class="line">    NSLog(@&quot;%@&quot;,NSHomeDirectory());</div><div class="line">&#125;</div><div class="line">- (void)didReceiveMemoryWarning &#123;</div><div class="line">    [super didReceiveMemoryWarning];</div><div class="line">    // Dispose of any resources that can be recreated.</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
-<p><em>ViewController.h</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &quot;CZPerson.h&quot;</div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    // Do any additional setup after loading the view, typically from a nib.</div><div class="line">    //反归档 (反序列化)</div><div class="line"></div><div class="line">    //1.获取路径</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //2.拼接文件名</div><div class="line"></div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    //3.通过反归档读取数据</div><div class="line"></div><div class="line">    CZPerson * p = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];</div><div class="line">    NSLog(@&quot;name =%@  phone = %@&quot;,p.name,p.phone);</div><div class="line">//    [self test01];</div><div class="line">&#125;</div><div class="line">//归档 (序列化)</div><div class="line">- (void) test01</div><div class="line">&#123;</div><div class="line">    //创建person对象</div><div class="line">    CZPerson * person = [[CZPerson alloc] init];</div><div class="line"></div><div class="line">    //赋值</div><div class="line">    person.name = @&quot;JackMeng&quot;;</div><div class="line">    person.phone = @&quot;186000001&quot;;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    //获取路径</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //拼接文件名</div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    // 归档</div><div class="line"></div><div class="line">   [NSKeyedArchiver archiveRootObject:person toFile:filePath];</div><div class="line"></div><div class="line">    NSLog(@&quot;%@&quot;,NSHomeDirectory());</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
+<p><em>CZPerson.h</em><br>[x] &#x6CE8;&#x610F;&#xFF1A;&#x6539;&#x65B9;&#x6CD5;&#x8981;&#x9075;&#x5B88;NSCodiing&#x534F;&#x8BAE;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">@interface CZPerson : NSObject&lt;NSCoding</div><div class="line">@property (nonatomic,copy) NSString * name;</div><div class="line">@property (nonatomic,copy) NSString * phone;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
+<p><em>CZPerson.m</em><br>[x] &#x6CE8;&#x610F;&#xFF1A;&#x5B9E;&#x73B0;NSCodiing&#x534F;&#x8BAE;&#x7684;&#x65B9;&#x6CD5;*<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#import &quot;CZPerson.h&quot;</div><div class="line"></div><div class="line">@implementation CZPerson</div><div class="line">//&#x786E;&#x5B9A;&#x8981;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#x7684;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;</div><div class="line">- (void)encodeWithCoder:(NSCoder *)aCoder</div><div class="line">{</div><div class="line">    [aCoder encodeObject:self.name forKey:@&quot;name&quot;];</div><div class="line">    [aCoder encodeObject:self.phone forKey:@&quot;phone&quot;];</div><div class="line">}</div><div class="line">//&#x786E;&#x5B9A;&#x8981;&#x8BFB;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;</div><div class="line"></div><div class="line">- (id)initWithCoder:(NSCoder *)aDecoder</div><div class="line">{</div><div class="line">    if(self = [super init])</div><div class="line">    {</div><div class="line">        self.name = [aDecoder decodeObjectForKey:@&quot;name&quot;];</div><div class="line">        self.phone = [aDecoder decodeObjectForKey:@&quot;phone&quot;];</div><div class="line">    }</div><div class="line">    return self;</div><div class="line">}</div><div class="line">@end</div></pre></td></tr></table></figure></p>
+<p><em>ViewController.m</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &quot;CZPerson.h&quot;</div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad {</div><div class="line">    [super viewDidLoad];</div><div class="line">    // Do any additional setup after loading the view, typically from a nib.</div><div class="line">    //&#x53CD;&#x5F52;&#x6863; (&#x53CD;&#x5E8F;&#x5217;&#x5316;)</div><div class="line"></div><div class="line">    //1.&#x83B7;&#x53D6;&#x8DEF;&#x5F84;</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //2.&#x62FC;&#x63A5;&#x6587;&#x4EF6;&#x540D;</div><div class="line"></div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    //3.&#x901A;&#x8FC7;&#x53CD;&#x5F52;&#x6863;&#x8BFB;&#x53D6;&#x6570;&#x636E;</div><div class="line"></div><div class="line">    CZPerson * p = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];</div><div class="line">    NSLog(@&quot;name =%@  phone = %@&quot;,p.name,p.phone);</div><div class="line">//    [self test01];</div><div class="line">}</div><div class="line">//&#x5F52;&#x6863; (&#x5E8F;&#x5217;&#x5316;)</div><div class="line">- (void) test01</div><div class="line">{</div><div class="line">    //&#x521B;&#x5EFA;person&#x5BF9;&#x8C61;</div><div class="line">    CZPerson * person = [[CZPerson alloc] init];</div><div class="line"></div><div class="line">    //&#x8D4B;&#x503C;</div><div class="line">    person.name = @&quot;JackMeng&quot;;</div><div class="line">    person.phone = @&quot;186000001&quot;;</div><div class="line"></div><div class="line">    //&#x83B7;&#x53D6;&#x8DEF;&#x5F84;</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //&#x62FC;&#x63A5;&#x6587;&#x4EF6;&#x540D;</div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    // &#x5F52;&#x6863;</div><div class="line"></div><div class="line">    [NSKeyedArchiver archiveRootObject:person toFile:filePath];</div><div class="line"></div><div class="line">    NSLog(@&quot;%@&quot;,NSHomeDirectory());</div><div class="line">}</div><div class="line">- (void)didReceiveMemoryWarning {</div><div class="line">    [super didReceiveMemoryWarning];</div><div class="line">    // Dispose of any resources that can be recreated.</div><div class="line">}</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
+<p><em>ViewController.h</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &quot;CZPerson.h&quot;</div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad {</div><div class="line">    [super viewDidLoad];</div><div class="line">    // Do any additional setup after loading the view, typically from a nib.</div><div class="line">    //&#x53CD;&#x5F52;&#x6863; (&#x53CD;&#x5E8F;&#x5217;&#x5316;)</div><div class="line"></div><div class="line">    //1.&#x83B7;&#x53D6;&#x8DEF;&#x5F84;</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //2.&#x62FC;&#x63A5;&#x6587;&#x4EF6;&#x540D;</div><div class="line"></div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    //3.&#x901A;&#x8FC7;&#x53CD;&#x5F52;&#x6863;&#x8BFB;&#x53D6;&#x6570;&#x636E;</div><div class="line"></div><div class="line">    CZPerson * p = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];</div><div class="line">    NSLog(@&quot;name =%@  phone = %@&quot;,p.name,p.phone);</div><div class="line">//    [self test01];</div><div class="line">}</div><div class="line">//&#x5F52;&#x6863; (&#x5E8F;&#x5217;&#x5316;)</div><div class="line">- (void) test01</div><div class="line">{</div><div class="line">    //&#x521B;&#x5EFA;person&#x5BF9;&#x8C61;</div><div class="line">    CZPerson * person = [[CZPerson alloc] init];</div><div class="line"></div><div class="line">    //&#x8D4B;&#x503C;</div><div class="line">    person.name = @&quot;JackMeng&quot;;</div><div class="line">    person.phone = @&quot;186000001&quot;;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    //&#x83B7;&#x53D6;&#x8DEF;&#x5F84;</div><div class="line">    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];</div><div class="line"></div><div class="line">    //&#x62FC;&#x63A5;&#x6587;&#x4EF6;&#x540D;</div><div class="line">    NSString * filePath = [path stringByAppendingPathComponent:@&quot;person&quot;];</div><div class="line"></div><div class="line">    // &#x5F52;&#x6863;</div><div class="line"></div><div class="line">   [NSKeyedArchiver archiveRootObject:person toFile:filePath];</div><div class="line"></div><div class="line">    NSLog(@&quot;%@&quot;,NSHomeDirectory());</div><div class="line">}</div><div class="line">@end</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -394,17 +394,17 @@ NSLog(@&quot;%@&quot;,names);
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/07/31/iOS开发之数据存储/">iOS开发之数据存储</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">Sloky Xu</a></p>
-        <p><span>Created:</span>2016-07-31, 21:37:24</p>
-        <p><span>Updated:</span>2016-07-31, 22:38:00</p>
+        <p><span>本文标题:</span><a href="/2016/07/31/iOS开发之数据存储/">iOS开发之数据存储</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Sloky Xu</a></p>
+        <p><span>发布时间:</span>2016-07-31, 21:37:24</p>
+        <p><span>最后更新:</span>2016-07-31, 22:38:00</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/07/31/iOS开发之数据存储/" title="iOS开发之数据存储">http://weishine121.github.io/2016/07/31/iOS开发之数据存储/</a>
-            <span class="copy-path" data-clipboard-text="From http://weishine121.github.io/2016/07/31/iOS开发之数据存储/　　By Sloky Xu" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/31/iOS开发之数据存储/" title="iOS开发之数据存储">http://weishine121.github.io/2016/07/31/iOS开发之数据存储/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://weishine121.github.io/2016/07/31/iOS开发之数据存储/　　作者: Sloky Xu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -431,7 +431,7 @@ NSLog(@&quot;%@&quot;,names);
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">文章目录</strong>
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、iOS应用数据存储的常用方式"><span class="toc-number">1.</span> <span class="toc-text">一、iOS应用数据存储的常用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、获取路径"><span class="toc-number">2.</span> <span class="toc-text">二、获取路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、沙盒路径目录结构"><span class="toc-number">3.</span> <span class="toc-text">三、沙盒路径目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、利用沙盒根目录拼接”Documents”字符串"><span class="toc-number">4.</span> <span class="toc-text">四、利用沙盒根目录拼接”Documents”字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、获取caches文件夹路径"><span class="toc-number">5.</span> <span class="toc-text">五、获取caches文件夹路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、获取偏好设置文件夹路径"><span class="toc-number">6.</span> <span class="toc-text">六、获取偏好设置文件夹路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、plist数据的存储与读取"><span class="toc-number">7.</span> <span class="toc-text">七、plist数据的存储与读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、plist数据的存储与读取"><span class="toc-number">8.</span> <span class="toc-text">八、plist数据的存储与读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、归档与反归档"><span class="toc-number">9.</span> <span class="toc-text">九、归档与反归档</span></a></li></ol>
 </div>
 <style>
@@ -441,10 +441,10 @@ NSLog(@&quot;%@&quot;,names);
     }
 </style>
 
-<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
 <script>
-    yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
 </script>
 
 
@@ -502,15 +502,15 @@ NSLog(@&quot;%@&quot;,names);
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/31/swift_中枚举高级用法及实践/" title="Pre: Swift 中枚举高级用法及实践">
+            <a href="/2016/07/31/swift_中枚举高级用法及实践/" title="上一篇: Swift 中枚举高级用法及实践">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/31/hello-world/" title="Next: Hello World">
+            <a href="/2016/07/31/hello-world/" title="下一篇: Hello World">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -533,14 +533,14 @@ NSLog(@&quot;%@&quot;,names);
                 2016-2017 Sloky Xu
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -550,7 +550,7 @@ NSLog(@&quot;%@&quot;,names);
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
+                        <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -583,9 +583,9 @@ NSLog(@&quot;%@&quot;,names);
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
